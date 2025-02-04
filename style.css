@@ -1,0 +1,430 @@
+/* Resetando estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Container Principal */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1f1f1f;
+    width: 280px;
+    padding: 20px;
+    color: #fff;
+    border-right: 3px solid #f9c74f;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius:20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: width 0.3s ease, padding 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar:hover {
+    width:350px;
+    padding: 20px 40px;
+    transform: scale(1.05);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #f9c74f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.8);
+}
+
+.name {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #f9c74f;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.name:hover {
+    color: #f7b731;
+}
+
+.title {
+    font-size: 16px;
+    color: #f9c74f;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.contact-info {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contact-info i {
+    margin-right: 10px; /* Adiciona espaço entre o ícone e o texto */
+}
+
+.contact-info li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.contact-info li a:hover {
+    color: #f9c74f;
+}
+
+/* Redes Sociais */
+.social-media a {
+    display: inline-block;
+    margin: 10px;
+    color: #f9c74f;
+    font-size: 28px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/* Barra de Navegação */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 15px;
+    width: 100%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f9c74f;
+}
+
+/* Animação para a sidebar */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.sidebar {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Área Principal */
+.main-content {
+    flex-grow: 1;
+    background-color: #2b2b2b;
+    padding: 20px;
+    overflow-y: auto;
+    border-radius: 10px;
+    height: calc(100vh - 40px);
+}
+
+.main-content h2 {
+    color: #f9c74f;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Cards de Serviços */
+.services {
+    margin-top: 20px;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.service-card {
+    background-color: #1f1f1f;
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 30px);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-card i {
+    font-size: 50px;
+    color: #f9c74f;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #f9c74f;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #d1d1d1;
+}
+
+/* Portfolio */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay p {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.view-project {
+    font-size: 14px;
+    color: #f9c74f;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid #f9c74f;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.view-project:hover {
+    background-color: #f9c74f;
+    color: #121212;
+}
+
+/* Formulário de Contato */
+.contact {
+    margin-top: 40px;
+}
+
+.contact h2 {
+    color: #f9c74f;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #2b2b2b;
+    border: 1px solid #444444;
+    padding: 12px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 16px;
+    width: 100%;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #f9c74f;
+}
+
+.contact-form button {
+    background-color: #f9c74f;
+    border: none;
+    color: #121212;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #d1a100;
+}
+
+/* Estilo para o botão de download */
+.download-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #f9c74f;
+    color: #121212;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: auto;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #d1a100;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn i {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover i {
+    transform: rotate(15deg);
+}
+
+/* Efeito de foco */
+.download-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(249, 199, 79, 0.7);
+}
+
+/* Estilos de responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        height: auto;
+    }
+
+    .service-card,
+    .portfolio-item {
+        flex: 1 1 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 14px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+}
