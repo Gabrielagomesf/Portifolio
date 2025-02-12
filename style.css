@@ -9,7 +9,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #121212;
-    color: #ffffff;
+    color: #fff;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -29,8 +29,8 @@ body {
 /* Sidebar */
 .sidebar {
     background-color: #1f1f1f;
-    width: 280px;
-    padding: 20px;
+    width: 300px;
+    padding: 30px;
     color: #fff;
     border-right: 3px solid #f9c74f;
     position: sticky;
@@ -39,20 +39,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius:20px;
+    border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     transition: width 0.3s ease, padding 0.3s ease, transform 0.3s ease;
 }
 
 .sidebar:hover {
-    width:350px;
-    padding: 20px 40px;
+    width: 350px;
+    padding: 30px 50px;
     transform: scale(1.05);
 }
 
+/* Imagem de perfil */
 .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     border: 4px solid #f9c74f;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -64,10 +65,11 @@ body {
     box-shadow: 0 0 20px rgba(255, 152, 0, 0.8);
 }
 
+/* Nome e título */
 .name {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
-    margin: 10px 0;
+    margin: 15px 0;
     color: #f9c74f;
     text-align: center;
     letter-spacing: 2px;
@@ -79,13 +81,14 @@ body {
 }
 
 .title {
-    font-size: 16px;
+    font-size: 18px;
     color: #f9c74f;
     margin-bottom: 20px;
     text-align: center;
     font-weight: 500;
 }
 
+/* Informações de contato */
 .contact-info {
     list-style: none;
     text-align: center;
@@ -94,13 +97,13 @@ body {
 }
 
 .contact-info li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-size: 16px;
     font-weight: 400;
 }
 
 .contact-info i {
-    margin-right: 10px; /* Adiciona espaço entre o ícone e o texto */
+    margin-right: 10px;
 }
 
 .contact-info li a {
@@ -116,9 +119,9 @@ body {
 /* Redes Sociais */
 .social-media a {
     display: inline-block;
-    margin: 10px;
+    margin: 12px;
     color: #f9c74f;
-    font-size: 28px;
+    font-size: 30px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -127,64 +130,35 @@ body {
     transform: scale(1.2);
 }
 
-/* Barra de Navegação */
-.nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-    gap: 15px;
-    width: 100%;
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #f9c74f;
-}
-
-/* Animação para a sidebar */
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-.sidebar {
-    animation: slideIn 0.5s ease-in-out;
-}
-
 /* Área Principal */
 .main-content {
     flex-grow: 1;
     background-color: #2b2b2b;
-    padding: 20px;
+    padding: 25px;
     overflow-y: auto;
-    border-radius: 10px;
+    border-radius: 15px;
     height: calc(100vh - 40px);
 }
 
-.main-content h2 {
+/* Sobre Mim */
+#about {
+    margin-bottom: 40px;
+}
+
+#about h2 {
+    font-size: 32px;
     color: #f9c74f;
-    font-size: 28px;
-    font-weight: 600;
     margin-bottom: 15px;
+}
+
+#about p {
+    font-size: 16px;
+    color: #d1d1d1;
 }
 
 /* Cards de Serviços */
 .services {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .service-cards {
@@ -211,7 +185,7 @@ body {
 }
 
 .service-card i {
-    font-size: 50px;
+    font-size: 55px;
     color: #f9c74f;
     margin-bottom: 15px;
 }
@@ -219,7 +193,7 @@ body {
 .service-card h3 {
     color: #f9c74f;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .service-card p {
@@ -231,9 +205,9 @@ body {
 .portfolio-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .portfolio-item {
@@ -278,7 +252,7 @@ body {
 }
 
 .portfolio-overlay p {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -298,67 +272,15 @@ body {
     color: #121212;
 }
 
-/* Formulário de Contato */
-.contact {
-    margin-top: 40px;
-}
-
-.contact h2 {
-    color: #f9c74f;
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    background-color: #2b2b2b;
-    border: 1px solid #444444;
-    padding: 12px;
-    border-radius: 6px;
-    color: #ffffff;
-    font-size: 16px;
-    width: 100%;
-    resize: vertical;
-    transition: border-color 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #f9c74f;
-}
-
-.contact-form button {
-    background-color: #f9c74f;
-    border: none;
-    color: #121212;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #d1a100;
-}
-
-/* Estilo para o botão de download */
+/* Estilos para o botão de download */
 .download-btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
+    margin-top: 15px;
+    padding: 12px 18px;
     background-color: #f9c74f;
     color: #121212;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     text-decoration: none;
     text-align: center;
@@ -371,60 +293,6 @@ body {
 .download-btn:hover {
     background-color: #d1a100;
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.download-btn i {
-    margin-right: 8px;
-    transition: transform 0.3s ease;
-}
-
-.download-btn:hover i {
-    transform: rotate(15deg);
-}
-
-/* Efeito de foco */
-.download-btn:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(249, 199, 79, 0.7);
-}
-
-/* Estilos de responsividade */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .main-content {
-        height: auto;
-    }
-
-    .service-card,
-    .portfolio-item {
-        flex: 1 1 100%;
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form button {
-        font-size: 14px;
-    }
-
-    .profile-img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .name {
-        font-size: 20px;
-    }
-
-    .title {
-        font-size: 14px;
-    }
-}
